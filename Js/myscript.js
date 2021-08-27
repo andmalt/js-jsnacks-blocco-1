@@ -65,12 +65,15 @@ console.log("Somma 2: "+somma2);
 
 
 
-let primaLista = ["Pane","Latte","Provola","Spaghetti","Nutella","Hamburger","Petto di pollo","Ravioli"];
-let secondaLista = ["Baccalà","Acqua","Caffè","Salmone","Peperoni","Cipolla"];
+let primaLista = ["Pane","Latte","Provola","Spaghetti","Nutella","Hamburger"];
+let secondaLista = ["Baccalà","Acqua","Caffè","Salmone","Peperoni","Cipolla","Petto di pollo","Ravioli"];
 
 
 while(primaLista.length > secondaLista.length){
     secondaLista.push(Math.floor(Math.random() * 100) + 1);  
+}
+while(primaLista.length < secondaLista.length){
+    primaLista.push(Math.floor(Math.random() * 100) + 1);  
 }
 
 
@@ -81,3 +84,5 @@ for(let i = 0; i < primaLista.length; i++){
 for(let i = 0; i < secondaLista.length; i++){
  document.getElementById("seconda-lista").innerHTML += "<li>" + secondaLista[i] + "</li>";
 }
+
+console.log(primaLista +" - "+secondaLista)
